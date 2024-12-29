@@ -1,6 +1,6 @@
 import { MdNotes } from "react-icons/md"
 
-function SidebarTasks() {
+function SidebarTask() {
     // props:  icon, isActive, amountOfTasks
     const isActive = true
     const amountOfTasks = 3
@@ -24,4 +24,4 @@ function SidebarTasks() {
     )
 }
 
-export default SidebarTasks
+export default SidebarTask

@@ -1,6 +1,6 @@
 import { FaSearch } from 'react-icons/fa'
 
-function SeachBar() {
+function SearchBar() {
     return (
         <div className="w-11/12 py-1 px-4 mx-auto rounded-full my-3 shadow flex justify-between">
             <input 
@@ -19,4 +19,4 @@ function SeachBar() {
     )
 }
 
-export default SeachBar
+export default SearchBar

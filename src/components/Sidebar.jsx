@@ -1,6 +1,23 @@
+import Header from './Header'
+import SearchBar from './SearchBar'
+import SidebarTask from './SidebarTask'
+import SubTask from './SubTask'
+import { MdNotes } from "react-icons/md"
+
+
 function Sidebar() {
+    // state vars placeholder
+    const noteCount = 0
+
     return(
-        <h1>Sidebar</h1>
+        <side>
+            <Header/>
+            <SearchBar/>
+            <SidebarTask name="Notes" icon={MdNotes} count={noteCount} />
+            <SidebarTask />
+            <SidebarTask />
+            <SidebarTask />
+        </side>
     )
 }
 

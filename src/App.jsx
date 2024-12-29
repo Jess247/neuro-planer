@@ -1,11 +1,11 @@
 import './App.css'
-import SidebarTasks from './components/SidebarTasks'
+import SearchBar from './components/SearchBar'
 
 function App() {
 
   return (
     <>
-      <SidebarTasks/>
+      <SearchBar/>
     </>
   )
 }

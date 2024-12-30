@@ -10,7 +10,7 @@ function Sidebar() {
     const noteCount = 0
 
     return(
-        <side>
+        <side className="border-r-[1px] h-screen">
             <Header/>
             <SearchBar/>
             <SidebarTask name="Notes" icon={MdNotes} count={noteCount} />

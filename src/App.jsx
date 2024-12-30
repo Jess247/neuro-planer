@@ -5,10 +5,9 @@ import Tabs from './components/Tabs'
 function App() {
 
   return (
-    <main className="flex items-start">
-      <Sidebar/>
-      <Tabs/>
-    </main>
+    <div >
+      <h1>Hello world</h1>
+    </div>
   )
 }
 

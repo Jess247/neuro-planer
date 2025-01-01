@@ -1,6 +1,13 @@
-function ProgressBar() {
+function ProgressBar({progress}) {
     return(
-        <h1>ProgressBar</h1>
+        <div className="mx-auto w-10/12 my-4 flex justify-center">
+            <div className="h-2 w-10/12 bg-slate-100 rounded-full flex items-center">
+                <div 
+                    className={`h-[80%] bg-[#F76C5E] rounded-full ml-[1px]`}
+                    style={{ width: `${progress}%` }}>
+                </div>
+            </div>
+        </div>
     )
 }
 

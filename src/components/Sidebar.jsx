@@ -35,11 +35,11 @@ function Sidebar() {
 ]
 
     return(
-        <side className="border-r-[1px] h-screen">
+        <aside className="border-r-[1px] h-screen">
             <Header/>
             <SearchBar/>
             {taskObjs.map(obj => <SidebarTask name={obj.name} icon={obj.icon} count={obj.count}/>)}
-        </side>
+        </aside>
     )
 }
 

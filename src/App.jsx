@@ -13,7 +13,6 @@ function App() {
       <h1 className="text-2xl">Task 1</h1>
       <ProgressBar progress={progress}/>
       <Task/>
-      <Task/>
     </div>
   )
 }

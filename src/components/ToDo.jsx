@@ -3,7 +3,7 @@ import { IoMdCheckboxOutline } from "react-icons/io"
 import { FaTrashAlt } from "react-icons/fa"
 import { useState } from "react"
 
-function Task() {
+function ToDo() {
     const [isChecked, setIsChecked] = useState(false)
     const taskText = "Get your shit together!"
 
@@ -23,4 +23,4 @@ function Task() {
     )
 }
 
-export default Task
+export default ToDo

@@ -1,6 +1,6 @@
 import './App.css'
 import ProgressBar from './components/ProgressBar'
-import Task from './components/Task'
+import ToDo from './components/ToDo'
 import { FaPlus } from "react-icons/fa";
 
 
@@ -23,9 +23,9 @@ function App() {
         <input 
           type="text" 
           placeholder="Drink one bottle of water..."
-          className="p-2 border-b font-thin text-sm w-11/12 flex ml-[4%] rounded-full shadow focus-visible:outline-1 focus-visible:outline focus-visible:outline-[#F76C5E]"  
+          className="p-2 border-b font-thin text-sm w-11/12 flex ml-[4%] mb-8 rounded-full shadow focus-visible:outline-1 focus-visible:outline focus-visible:outline-[#F76C5E]"  
           />
-      <Task/>
+      <ToDo/>
     </div>
   )
 }

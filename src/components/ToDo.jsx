@@ -3,7 +3,7 @@ import { IoMdCheckboxOutline } from "react-icons/io"
 import { FaTrashAlt } from "react-icons/fa"
 import { useState } from "react"
 
-function ToDo() {
+function ToDo({name}) {
     const [isChecked, setIsChecked] = useState(false)
     const taskText = "Get your shit together!"
 
@@ -16,7 +16,7 @@ function ToDo() {
                 className="flex items-center gap-4"
                 onClick={handleClick}>
                 {isChecked ? <IoMdCheckboxOutline/> : <MdCheckBoxOutlineBlank/>}
-                <span className={isChecked ? "line-through": ""}>{taskText}</span>
+                <span className={isChecked ? "line-through": ""}>{name}</span>
             </div>
             <FaTrashAlt/>
         </div>

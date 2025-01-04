@@ -9,16 +9,17 @@ function App() {
   const [todo, setTodo] = useState('')
   const [todoList, setTodoList] = useState([])
 
-  const toDoEl = document.getElementById('to-do-textfield')
   const totalTasks = 10
   const completed = 7
   const progress = completed / totalTasks * 100
 
   const handleChange = () => {
+    const toDoEl = document.getElementById('to-do-textfield')
     setTodo(toDoEl.value)
   }
   const handleEnter = () => {
-    setTodoList(prevTodoList => [...prevTodoList, todo])
+    const toDoEl = document.getElementById('to-do-textfield')
+    setTodoList(prevTodoList => [{name:todo, isChecked:false} ,...prevTodoList])
     toDoEl.value = ""
   }
 
@@ -37,7 +38,7 @@ function App() {
           onKeyDown={e => e.key === 'Enter' && handleEnter()}
           className="p-2 border-b font-thin text-sm w-11/12 flex ml-[4%] mb-8 rounded-full shadow focus-visible:outline-1 focus-visible:outline focus-visible:outline-[#F76C5E]"  
           />
-      {todoList.length > 0 && todoList.map((todo,index) => <ToDo key={index} name={todo} />)}
+      {todoList.length > 0 && todoList.map((todo,index) => <ToDo key={index} name={todo.name} isChecked={todo.isChecked} setTodoList={setTodoList} id={index} />)}
     </div>
   )
 }

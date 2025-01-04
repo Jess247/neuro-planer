@@ -3,12 +3,15 @@ import { IoMdCheckboxOutline } from "react-icons/io"
 import { FaTrashAlt } from "react-icons/fa"
 import { useState } from "react"
 
-function ToDo({name}) {
-    const [isChecked, setIsChecked] = useState(false)
-    const taskText = "Get your shit together!"
+function ToDo({name, isChecked, setTodoList, id}) {
 
     const handleClick = () => {
-        setIsChecked(!isChecked)
+        setTodoList(prevTodoList => prevTodoList.map((todo,index) => {
+            if(index === id) {
+                return {...todo, isChecked:!isChecked}
+            }
+        }))
+        console.log(isChecked)
     }
     return(
         <div className="flex justify-between items-center w-11/12 mx-auto my-3 bg-slate-100 py-2 px-4 rounded shadow">

@@ -13,22 +13,22 @@ function Sidebar() {
     const noteCount = 0
     const taskObjs = [
         {
+            name: "Tasks",
+            icon: FaCheck,
+            count: 0
+        },
+        {
             name: "Notes",
             icon: MdNotes,
             count: 0
         },
         {
-            name: "task",
-            icon: FaCheck,
-            count: 0
-        },
-        {
-            name: "done",
+            name: "Done",
             icon: IoMdDoneAll,
             count: null
         },
         {
-            name: "achievements",
+            name: "Achievements",
             icon: GiAchievement,
             count: null
         },

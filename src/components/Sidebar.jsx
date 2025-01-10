@@ -38,7 +38,7 @@ function Sidebar() {
         <aside className="border-r-[1px] h-screen">
             <Header/>
             <SearchBar/>
-            {taskObjs.map(obj => <SidebarTask name={obj.name} icon={obj.icon} count={obj.count}/>)}
+            {taskObjs.map((obj, index) => <SidebarTask key={index} name={obj.name} icon={obj.icon} count={obj.count}/>)}
         </aside>
     )
 }

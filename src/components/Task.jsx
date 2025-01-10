@@ -1,7 +1,7 @@
 import ProgressBar from './ProgressBar'
 import ToDo from './ToDo'
-import { FaPlus } from "react-icons/fa";
-import { useState } from 'react';
+import { FaPlus } from "react-icons/fa"
+import { useState } from 'react'
 
 
 function Task() {

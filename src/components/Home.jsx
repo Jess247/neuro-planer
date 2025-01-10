@@ -1,4 +1,4 @@
-function Home() {
+function Home({tasks}) {
     return(
         <main>
             <h1>Home</h1>

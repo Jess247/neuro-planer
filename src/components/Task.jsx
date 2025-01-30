@@ -3,6 +3,7 @@ import ToDo from './ToDo'
 import { FaPlus } from "react-icons/fa"
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import { useParams } from 'react-router'
 
 
 function Task() {
@@ -12,6 +13,7 @@ function Task() {
   const totalTasks = todoList.length
   const completed = todoList.filter(item => item?.isChecked === true).length
   const progress = completed / totalTasks * 100
+  const {id} = useParams()
 
   const handleChange = () => {
     const toDoEl = document.getElementById('to-do-textfield')

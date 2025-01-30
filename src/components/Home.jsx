@@ -1,5 +1,7 @@
 import TaskBanner from "./TaskBanner"
 import { FaPlus } from "react-icons/fa"
+import { v4 as uuidv4 } from 'uuid'
+
 function Home({tasks}) {
 
     const handleClick = () => {

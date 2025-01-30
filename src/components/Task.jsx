@@ -2,6 +2,7 @@ import ProgressBar from './ProgressBar'
 import ToDo from './ToDo'
 import { FaPlus } from "react-icons/fa"
 import { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 
 function Task() {
@@ -20,7 +21,7 @@ function Task() {
     const toDoEl = document.getElementById('to-do-textfield')
     if (todo !== "") { 
       setTodoList(prevTodoList => [
-        { name: todo, isChecked: false },
+        { name: todo, isChecked: false, id:uuidv4() },
         ...prevTodoList,
       ])
     }
@@ -43,7 +44,14 @@ function Task() {
           onKeyDown={e => e.key === 'Enter' && handleEnter()}
           className="p-2 border-b font-thin text-sm w-11/12 flex ml-[4%] mb-8 rounded-full shadow focus-visible:outline-1 focus-visible:outline focus-visible:outline-[#F76C5E]"  
           />
-      {todoList.length > 0 && todoList.map((task,index) => <ToDo key={index} name={task?.name} isChecked={task?.isChecked} setTodoList={setTodoList} id={index} />)}
+      {todoList.length > 0 && todoList.map(task => 
+        <ToDo 
+          key={task.id} 
+          name={task?.name} 
+          isChecked={task?.isChecked} 
+          setTodoList={setTodoList} 
+          id={task.id} 
+        />)}
     </main>
   )
 }

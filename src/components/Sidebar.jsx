@@ -13,22 +13,22 @@ function Sidebar() {
     const noteCount = 0
     const taskObjs = [
         {
+            name: "Tasks",
+            icon: FaCheck,
+            count: 0
+        },
+        {
             name: "Notes",
             icon: MdNotes,
             count: 0
         },
         {
-            name: "task",
-            icon: FaCheck,
-            count: 0
-        },
-        {
-            name: "done",
+            name: "Done",
             icon: IoMdDoneAll,
             count: null
         },
         {
-            name: "achievements",
+            name: "Achievements",
             icon: GiAchievement,
             count: null
         },
@@ -38,7 +38,7 @@ function Sidebar() {
         <aside className="border-r-[1px] h-screen">
             <Header/>
             <SearchBar/>
-            {taskObjs.map(obj => <SidebarTask name={obj.name} icon={obj.icon} count={obj.count}/>)}
+            {taskObjs.map((obj, index) => <SidebarTask key={index} name={obj.name} icon={obj.icon} count={obj.count}/>)}
         </aside>
     )
 }

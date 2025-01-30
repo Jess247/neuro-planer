@@ -8,8 +8,12 @@ function SidebarTask({name, icon: Icon, count}) {
 
 
     const color = isActive ? "bg-[#F76C5E] text-white" : "bg-slate-300"
+    const handleClick = () => {
+        
+    }
+
     return(
-        <div className={`${color} flex items-center justify-between shadow py-2 px-4 w-[90%] m-auto mb-2 rounded`}>
+        <div className={`${color} flex items-center justify-between shadow py-2 px-4 w-[90%] m-auto mb-2 rounded cursor-pointer`}>
             <div className="flex items-center gap-2">
                 {Icon && <Icon/>}
                 <span>{name}</span>

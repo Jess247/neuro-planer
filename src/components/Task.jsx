@@ -3,10 +3,13 @@ import ToDo from './ToDo'
 import { FaPlus } from "react-icons/fa"
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
-import { useParams } from 'react-router'
+import { useLocation, useParams } from 'react-router'
+
 
 
 function Task() {
+
+
   const [todo, setTodo] = useState('')
   const [todoList, setTodoList] = useState([])
 
@@ -14,6 +17,8 @@ function Task() {
   const completed = todoList.filter(item => item?.isChecked === true).length
   const progress = completed / totalTasks * 100
   const {id} = useParams()
+  const location = useLocation()
+  const title = location.state?.title || `${+id + 1}`
 
   const handleChange = () => {
     const toDoEl = document.getElementById('to-do-textfield')
@@ -33,7 +38,7 @@ function Task() {
 
   return (
     <main className="text-center w-11/12 mx-auto mt-8">
-      <h1 className="text-2xl inline align-middle">Task 1</h1>
+      <h1 className="text-2xl inline align-middle">{title}</h1>
       <FaPlus className="inline float-end" size={25}/>
       <ProgressBar progress={progress}/>
       <label htmlFor="textfield" className="opacity-0">To-do

@@ -3,11 +3,12 @@ import { IoMdCheckboxOutline } from "react-icons/io"
 import { FaTrashAlt } from "react-icons/fa"
 import { useState } from "react"
 
-function ToDo({name, isChecked, setTodoList, id}) {
+function ToDo({name, isChecked, setTodoList, id, task}) {
 
     const handleClick = () => {
         setTodoList(prevTodoList => prevTodoList.map(
-            (todo, index) => index === id ? {...todo, isChecked:!todo.isChecked}:todo))
+            (todo, index) => id === todo.id ? {...todo, isChecked:!todo.isChecked}:todo))
+            console.log(task.id)
     }
 
     const handleDelete = () => {

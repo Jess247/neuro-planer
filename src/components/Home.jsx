@@ -7,6 +7,7 @@ function Home({tasks}) {
     const handleClick = () => {
         console.log('clickidyClack')
     }
+    
     return(
         <main>
             <div className="flex justify-center items-center">

@@ -56,6 +56,7 @@ function Task() {
           key={task.id} 
           name={task?.name} 
           isChecked={task?.isChecked} 
+          task={task}
           setTodoList={setTodoList} 
           id={task.id} 
         />)}

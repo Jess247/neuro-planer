@@ -1,14 +1,16 @@
 import { MdNotes } from "react-icons/md"
-import { Link } from "react-router"
+import { Link, useLocation } from "react-router"
 
 function SidebarTask({name, icon: Icon, count}) {
     // props place holders  icon, isActive, amountOfTasks
-    const isActive = true
+    const location = useLocation()
+    const { pathname } = location
+    const isActive = pathname === `/${name.toLowerCase()}` ||  pathname === '/' && name === 'Tasks'
     const amountOfTasks = 3
     const taskName = "Task"
 
 
-    const color = isActive ? "bg-[#F76C5E] text-white" : "bg-slate-300"
+    const color = isActive ? "bg-[#F76C5E] text-white" : "bg-slate-100"
 
     return(
 

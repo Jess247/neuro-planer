@@ -8,11 +8,10 @@ function ToDo({name, isChecked, setTodoList, id, task}) {
     const handleClick = () => {
         setTodoList(prevTodoList => prevTodoList.map(
             (todo, index) => id === todo.id ? {...todo, isChecked:!todo.isChecked}:todo))
-            console.log(task.id)
     }
 
     const handleDelete = () => {
-        setTodoList(prevTodoList => prevTodoList.filter(todo => todo.id != id))
+        setTodoList(prevTodoList => prevTodoList.filter(todo => todo.id !== id))
     }
 
     return(
